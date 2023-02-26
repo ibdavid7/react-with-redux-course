@@ -1,3 +1,8 @@
+# react-with-redux-course
+
+Modern React with Redux Toolkit, RTK Query, custom hooks. Udemy course Steve Grider
+(https://www.udemy.com/course/react-redux)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
