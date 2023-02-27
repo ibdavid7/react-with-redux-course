@@ -1,5 +1,5 @@
 import './App.css';
-import {Pdas} from "./Containers";
+import {Pdas, AnimalWidget} from "./Containers";
 
 function App() {
 
@@ -7,6 +7,7 @@ function App() {
     return (
         <div className={'flex flex-col items-center'}>
             <Pdas/>
+            <AnimalWidget/>
         </div>
     );
 }

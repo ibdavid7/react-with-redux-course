@@ -1,3 +1,10 @@
 export {default as alexa} from './alexa.png';
 export {default as cortana} from './cortana.png';
 export {default as siri} from './siri.png';
+export {default as bird} from './bird.svg';
+export {default as cat} from './cat.svg';
+export {default as cow} from './cow.svg';
+export {default as dog} from './dog.svg';
+export {default as gator} from './gator.svg';
+export {default as heart} from './heart.svg';
+export {default as horse} from './horse.svg';
