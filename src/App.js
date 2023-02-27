@@ -1,14 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import {Pdas} from "./Containers";
 
 function App() {
+
+
     return (
-        <div className="App flex w-full h-screen items-center justify-center">
-
-            <h1 className="text-3xl font-bold underline">
-                Hello world!
-            </h1>
-
+        <div className={'flex flex-col items-center'}>
+            <Pdas/>
         </div>
     );
 }
