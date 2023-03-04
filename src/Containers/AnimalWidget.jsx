@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Card } from 'antd';
-import { Button, Space, Divider } from 'antd';
+import { Button, Space, Divider, Card } from 'antd';
 import { bird, cat, cow, dog, gator, heart, horse } from '../Assets';
 
 const { Meta } = Card;
@@ -43,7 +42,8 @@ const AnimalWidget = () => {
                 display: 'flex', flexDirection: 'column',
                 backgroundColor: 'rgb(249 250 251)',
                 borderRadius: '10px', minWidth: '80%',
-                paddingBottom: '20px', maxWidth:'80%'
+                paddingBottom: '20px', maxWidth: '80%',
+                marginTop: '1rem'
             }}>
 
             {/*Heading*/}
@@ -97,7 +97,7 @@ const AnimalWidget = () => {
             </div>
 
             {/*Animal Cards*/}
-            <div id='id1234' key='1234' className={'flex flex-row flex-wrap justify-center border'}
+            <div className={'flex flex-row flex-wrap justify-center border'}
                 style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}
             >
                 {animals.map((animal, index) => {
@@ -130,9 +130,7 @@ const AnimalWidget = () => {
                 })}
             </div>
         </div>
-
-    )
-        ;
+    );
 };
 
 export default AnimalWidget;

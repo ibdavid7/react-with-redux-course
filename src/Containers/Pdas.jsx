@@ -12,7 +12,7 @@ const Pdas = () => {
                  display: 'flex', flexDirection: 'column',
                  backgroundColor: 'rgb(249 250 251)',
                  borderRadius: '10px', minWidth:'80%',
-                 paddingBottom:'20px'
+                 paddingBottom:'20px', marginTop: '1rem'
              }}>
             <div className={'p-8 m-10 bg-slate-400'}
                  style={{
@@ -40,7 +40,7 @@ const Pdas = () => {
                                     title={title}
                                     handle={handle}
                                     description={description}
-                                    avatar={<Avatar src="https://joesch.moe/api/v1/random"/>}
+                                    avatar={<Avatar src="" style={{backgroundColor:'gray'}}/>}
                                 />
                             </Card>
                         </div>

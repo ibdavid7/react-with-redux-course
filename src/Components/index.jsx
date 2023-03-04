@@ -1,1 +1,1 @@
-// export { default as Ecommerce } from './Ecommerce';
+export { default as SearchBar } from './SearchBar';
