@@ -1,14 +1,13 @@
 import React, {useState} from 'react';
 import {Button, Space, Input} from "antd";
 
-const BookEdit = ({book, onEdit, disableEditMode}) => {
+const BookEdit = ({book, onEdit}) => {
 
     const [title, setTitle] = useState(book.title);
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
         onEdit(book.id, title);
-        disableEditMode();
         setTitle('');
     }
 

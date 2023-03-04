@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Card} from "antd";
 import {BsXLg, BsPen} from 'react-icons/bs';
-import {book as bookCover} from "../Assets";
 import {BookEdit} from "./index";
 
 const {Meta} = Card;
@@ -13,7 +12,10 @@ const BookShow = ({book, onDelete, onEdit}) => {
     const enableEditMode = () => setEditMode(true);
     const disableEditMode = () => setEditMode(false);
 
-
+    const handleSubmit = (bookId, newTitle) => {
+        onEdit(bookId, newTitle);
+        disableEditMode();
+    }
     return (
         <div style={{padding: '10px'}} key={book.id}>
             {/*{console.log(book.id)}*/}
@@ -21,7 +23,7 @@ const BookShow = ({book, onDelete, onEdit}) => {
                 style={{width: 240}}
                 cover={<img
                     alt={'book cover'}
-                    src={bookCover}
+                    src={`https://picsum.photos/seed/${book.id}/200/300.webp`}
                     style={{objectFit: 'cover', height: '225px', position: 'relative'}}/>}
                 loading={false}
                 onClick={() => {
@@ -47,6 +49,7 @@ const BookShow = ({book, onDelete, onEdit}) => {
                                     fontSize: '1.3rem',
                                     color: 'black',
                                     backgroundColor: 'lightGray',
+                                    opacity:'0.6',
                                     margin: '0.1rem',
                                     padding: '0.1rem'
                                 }}
@@ -63,6 +66,7 @@ const BookShow = ({book, onDelete, onEdit}) => {
                                 fontSize: '1.5rem',
                                 color: 'black',
                                 backgroundColor: 'lightGray',
+                                opacity:'0.6',
                                 margin: '0.1rem'
                             }}
                             onClick={() => onDelete(book.id)}
@@ -72,8 +76,7 @@ const BookShow = ({book, onDelete, onEdit}) => {
                 {editMode
                     ? <BookEdit
                         book={book}
-                        onEdit={onEdit}
-                        disableEditMode={disableEditMode}
+                        onEdit={handleSubmit}
                     />
                     : <Meta
                         title={book.title}
