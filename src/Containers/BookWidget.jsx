@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
-import {Button, Card, Divider, Space} from "antd";
-import {BookCreate, BookList, SearchBar} from "../Components";
+import {Divider} from "antd";
+import {BookCreate, BookList} from "../Components";
 import {v4 as uuidv4} from 'uuid';
-
-const {Meta} = Card;
 
 const BookWidget = () => {
 
@@ -12,6 +10,22 @@ const BookWidget = () => {
     const createBook = (title) => {
         setBooks([...books, {id: uuidv4(), title}]);
         // console.log(title);
+    }
+
+    const deleteBookById = (id) => {
+        const updatedBooks = books.filter((book) => book.id !== id);
+        setBooks(updatedBooks);
+    }
+
+    const editBookTitleById = (id, newTitle) => {
+        const updatedBooks = books.map((book) => {
+            if (book.id === id) {
+                return {...book, title: newTitle};
+            } else {
+                return book;
+            }
+        })
+        setBooks(updatedBooks);
     }
 
     return (
@@ -53,6 +67,8 @@ const BookWidget = () => {
             {/*Book Cards*/}
             <BookList
                 books={books}
+                onDelete={deleteBookById}
+                onEdit={editBookTitleById}
             />
         </div>
     );

@@ -1,8 +1,5 @@
 import './App.css';
-import {SearchBar} from './Components';
-import {Pdas, AnimalWidget, BookWidget} from "./Containers";
-import ImageSearch from './Containers/ImageSearch';
-import {Api} from './Data';
+import {Pdas, AnimalWidget, BookWidget, ImageSearch} from "./Containers";
 
 function App() {
 

@@ -30,7 +30,7 @@ const Pdas = () => {
                     return (
                         <div style={{padding: '10px'}} key={index}>
                             <Card
-                                extra={<a href="#">More</a>}
+                                // extra={<a href="">More</a>}
                                 hoverable
                                 style={{width: 240}}
                                 cover={<img alt={title} src={img} style={{objectFit: 'contain', maxHeight: '225px'}}/>}

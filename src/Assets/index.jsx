@@ -8,3 +8,4 @@ export {default as dog} from './dog.svg';
 export {default as gator} from './gator.svg';
 export {default as heart} from './heart.svg';
 export {default as horse} from './horse.svg';
+export {default as book} from './book_cover.jpg';
