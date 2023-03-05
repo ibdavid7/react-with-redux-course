@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {BookShow} from "./index";
+import {BooksContext} from "../Context";
 
-const BookList = ({books, onDelete, onEdit}) => {
+const BookList = () => {
+
+    const {books} = useContext(BooksContext);
+
     return (
         // Book Cards
         <div className={'flex flex-row flex-wrap justify-center border'}
@@ -13,8 +17,6 @@ const BookList = ({books, onDelete, onEdit}) => {
                     <BookShow
                         key={book.id}
                         book={book}
-                        onDelete={onDelete}
-                        onEdit={onEdit}
                     />
                 );
             })}
