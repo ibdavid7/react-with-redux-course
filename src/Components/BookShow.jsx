@@ -1,14 +1,14 @@
-import React, {useContext, useState} from 'react';
+import React, {useState} from 'react';
 import {Card} from "antd";
 import {BsXLg, BsPen} from 'react-icons/bs';
 import {BookEdit} from "./index";
-import {BooksContext} from "../Context";
+import {useBooksContext} from "../Hooks";
 
 const {Meta} = Card;
 
 const BookShow = ({book}) => {
 
-    const {deleteBookById} = useContext(BooksContext)
+    const {deleteBookById} = useBooksContext();
 
     const [editMode, setEditMode] = useState(false);
 

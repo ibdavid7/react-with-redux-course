@@ -1,11 +1,11 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {Divider} from "antd";
 import {BookCreate, BookList} from "../Components";
-import {BooksContext} from "../Context";
+import {useBooksContext} from "../Hooks";
 
 const BookWidget = () => {
 
-    const {books, fetchBooks} = useContext(BooksContext);
+    const {books, fetchBooks} = useBooksContext();
 
     useEffect(() => {
         fetchBooks();

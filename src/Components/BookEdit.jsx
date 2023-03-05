@@ -1,10 +1,10 @@
-import React, {useContext, useState} from 'react';
+import React, {useState} from 'react';
 import {Button, Space, Input} from "antd";
-import {BooksContext} from "../Context";
+import {useBooksContext} from "../Hooks";
 
 const BookEdit = ({book, onSubmit}) => {
 
-    const {editBookTitleById} = useContext(BooksContext);
+    const {editBookTitleById} = useBooksContext();
 
     const [title, setTitle] = useState(book.title);
 
