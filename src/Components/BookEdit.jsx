@@ -1,13 +1,17 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {Button, Space, Input} from "antd";
+import {BooksContext} from "../Context";
 
-const BookEdit = ({book, onEdit}) => {
+const BookEdit = ({book, onSubmit}) => {
+
+    const {editBookTitleById} = useContext(BooksContext);
 
     const [title, setTitle] = useState(book.title);
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
-        onEdit(book.id, title);
+        editBookTitleById(book.id, title);
+        onSubmit();
         setTitle('');
     }
 

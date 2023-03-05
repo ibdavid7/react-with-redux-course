@@ -1,15 +1,17 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {Button, Space, Input} from "antd";
-import axios from "axios";
+import {BooksContext} from "../Context";
 
-const BookCreate = ({onCreate}) => {
+const BookCreate = () => {
+
+    const {createBook} = useContext(BooksContext);
 
         const [title, setTitle] = useState('');
 
         const handleOnSubmit = (event) => {
             if (title !== '') {
                 event.preventDefault();
-                onCreate(title);
+                createBook(title);
                 setTitle('');
             }
         }

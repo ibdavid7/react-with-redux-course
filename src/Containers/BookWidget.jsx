@@ -1,75 +1,16 @@
-import React, {useState, useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Divider} from "antd";
 import {BookCreate, BookList} from "../Components";
-import {v4 as uuidv4} from 'uuid';
-import axios from "axios";
+import {BooksContext} from "../Context";
 
 const BookWidget = () => {
 
-    const [books, setBooks] = useState([]);
-
-    const fetchBooks = async () => {
-        const response = axios.get(process.env.REACT_APP_API_URL);
-        setBooks((await response).data)
-    }
+    const {books, fetchBooks} = useContext(BooksContext);
 
     useEffect(() => {
-        fetchBooks()
+        fetchBooks();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-
-
-    const createBook = async (title) => {
-
-        // API code
-        try {
-            console.log(process.env.REACT_APP_API_URL);
-            const response = await axios.post(process.env.REACT_APP_API_URL, {title: title});
-            // console.log(response.data);
-            setBooks([
-                ...books,
-                response.data
-            ]);
-
-        } catch (e) {
-            console.log(e);
-        }
-    }
-
-    const deleteBookById = async (id) => {
-
-        try {
-            await axios.delete(`${process.env.REACT_APP_API_URL}/${id}`);
-
-            const updatedBooks = books.filter((book) => book.id !== id);
-            setBooks(updatedBooks);
-        } catch (e) {
-            console.log(e);
-        }
-
-    }
-
-    const editBookTitleById = async (id, newTitle) => {
-
-        try {
-            const response = await axios.put(`${process.env.REACT_APP_API_URL}/${id}`, {
-                id: id, title: newTitle,
-            })
-            // console.log(response);
-
-            const updatedBooks = books.map((book) => {
-                if (book.id === id) {
-                    return response.data;
-                } else {
-                    return book;
-                }
-            })
-            setBooks(updatedBooks);
-
-        } catch (e) {
-            console.log(e);
-        }
-
-    }
 
     return (
         // Container
@@ -95,9 +36,7 @@ const BookWidget = () => {
 
             {/*BookCreate Component*/}
             <div>
-                <BookCreate
-                    onCreate={createBook}
-                />
+                <BookCreate/>
             </div>
 
             {/*Divider*/}
@@ -108,11 +47,7 @@ const BookWidget = () => {
             </div>
 
             {/*Book Cards*/}
-            <BookList
-                books={books}
-                onDelete={deleteBookById}
-                onEdit={editBookTitleById}
-            />
+            <BookList/>
         </div>
     );
 };

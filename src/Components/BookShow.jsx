@@ -1,21 +1,20 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {Card} from "antd";
 import {BsXLg, BsPen} from 'react-icons/bs';
 import {BookEdit} from "./index";
+import {BooksContext} from "../Context";
 
 const {Meta} = Card;
 
-const BookShow = ({book, onDelete, onEdit}) => {
+const BookShow = ({book}) => {
+
+    const {deleteBookById} = useContext(BooksContext)
 
     const [editMode, setEditMode] = useState(false);
 
     const enableEditMode = () => setEditMode(true);
     const disableEditMode = () => setEditMode(false);
 
-    const handleSubmit = (bookId, newTitle) => {
-        onEdit(bookId, newTitle);
-        disableEditMode();
-    }
     return (
         <div style={{padding: '10px'}} key={book.id}>
             {/*{console.log(book.id)}*/}
@@ -49,7 +48,7 @@ const BookShow = ({book, onDelete, onEdit}) => {
                                     fontSize: '1.3rem',
                                     color: 'black',
                                     backgroundColor: 'lightGray',
-                                    opacity:'0.6',
+                                    opacity: '0.6',
                                     margin: '0.1rem',
                                     padding: '0.1rem'
                                 }}
@@ -66,17 +65,17 @@ const BookShow = ({book, onDelete, onEdit}) => {
                                 fontSize: '1.5rem',
                                 color: 'black',
                                 backgroundColor: 'lightGray',
-                                opacity:'0.6',
+                                opacity: '0.6',
                                 margin: '0.1rem'
                             }}
-                            onClick={() => onDelete(book.id)}
+                            onClick={() => deleteBookById(book.id)}
                         />
                     </div>
                 </div>
                 {editMode
                     ? <BookEdit
                         book={book}
-                        onEdit={handleSubmit}
+                        onSubmit={disableEditMode}
                     />
                     : <Meta
                         title={book.title}
