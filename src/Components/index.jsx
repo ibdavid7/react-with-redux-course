@@ -4,3 +4,5 @@ export {default as BookEdit} from './BookEdit';
 export {default as BookList} from './BookList';
 export {default as BookShow} from './BookShow';
 export {default as Button} from './Button';
+export {default as Accordion} from './Accordion';
+export {default as Dropdown} from './Dropdown';
