@@ -24,7 +24,7 @@ export const dropdownData = [
         label: 'React',
         value: 0,
     }, {
-        label: 'Angualar ',
+        label: 'Angular ',
         value: 1,
     }, {
         label: 'Vue',
