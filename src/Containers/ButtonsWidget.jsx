@@ -2,7 +2,7 @@ import React from 'react';
 import {Button} from "../Components";
 import {GoBell, GoCloudDownload, GoDatabase} from "react-icons/go";
 
-const SideBar = () => {
+const ButtonsWidget = () => {
     return (
         <div className={'flex flex-col items-center'}>
             <div>
@@ -63,4 +63,4 @@ const SideBar = () => {
     );
 };
 
-export default SideBar;
+export default ButtonsWidget;

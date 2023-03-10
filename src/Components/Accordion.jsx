@@ -25,9 +25,10 @@ const Accordion = ({ items }) => {
         );
 
         return (
-            <div>
+            <div
+                key={index}
+            >
                 <div
-                    key={index}
                     onClick={() => handleClick(index)}
                     className='flex justify-between p-3
                     bg-gray-50 border-b cursor-pointer

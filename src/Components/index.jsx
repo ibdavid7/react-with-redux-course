@@ -7,3 +7,6 @@ export {default as Button} from './Button';
 export {default as Accordion} from './Accordion';
 export {default as Dropdown} from './Dropdown';
 export {default as Panel} from './Panel';
+export {default as Link} from './Link';
+export {default as Route} from './Route';
+export {default as Sidebar} from './Sidebar';
