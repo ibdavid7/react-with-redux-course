@@ -17,7 +17,7 @@ export const accordion = [
         label: 'Can I use Vue to build a project',
         content: 'Vue was created specifically to build SPA projects',
     },
-]
+];
 
 export const dropdownData = [
     {
@@ -30,4 +30,17 @@ export const dropdownData = [
         label: 'Vue',
         value: 2,
     },
-]
+];
+
+export const tableData = [
+    { name: 'Orange', color: 'bg-orange-500', score: 5 },
+    { name: 'Apple', color: 'bg-red-300', score: 3 },
+    { name: 'Banana', color: 'bg-yellow-500', score: 1 },
+    { name: 'Lime', color: 'bg-green-500', score: 4 },
+];
+
+export const tableConfig = [
+    { label: 'Fuits', render: (fruit) => fruit.name },
+    { label: 'Color', render: (fruit) => <div className={`p-2 m-2 ${fruit.color}`} /> },
+    { label: 'Score', render: (fruit) => fruit.score, sort: (a, b) => a - b },
+];

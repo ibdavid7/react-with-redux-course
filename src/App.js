@@ -4,7 +4,7 @@ import { GoBell, GoCloudDownload, GoDatabase } from 'react-icons/go';
 import { Accordion, Route, Link, Sidebar, Button } from './Components';
 import { accordion, dropdownData } from "./Data/dummy";
 import { useState } from 'react';
-import DropdownPage from './Pages/DropdownPage';
+import {DropdownPage, ModalPage, TablePage} from './Pages';
 
 function App() {
 
@@ -29,6 +29,14 @@ function App() {
 
                 <Route path={'/buttons'}>
                     <ButtonsWidget />
+                </Route>
+
+                <Route path={'/modal'}>
+                    <ModalPage />
+                </Route>
+
+                <Route path={'/table'}>
+                    <TablePage />
                 </Route>
 
                 {/* <DropdownPage /> */}

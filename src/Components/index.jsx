@@ -10,3 +10,5 @@ export {default as Panel} from './Panel';
 export {default as Link} from './Link';
 export {default as Route} from './Route';
 export {default as Sidebar} from './Sidebar';
+export {default as Modal} from './Modal';
+export {default as Table} from './Table';
