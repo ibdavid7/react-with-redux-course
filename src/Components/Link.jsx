@@ -15,7 +15,7 @@ const Link = ({ to, children, className, activeClassName }) => {
 
     const handleClick = (event) => {
         // check whether user using Ctrl to open new window
-        console.log(event);
+        // console.log(event);
         if (event.metaKey || event.ctrlKey) {
             return;
         }

@@ -1,12 +1,17 @@
 import React from 'react';
-import { Table } from '../Components';
+import { SortableTable } from '../Components';
 import { tableData, tableConfig } from '../Data/dummy';
 
 
 const TablePage = () => {
+
+    const keyFn = (fruit) => {
+        return fruit.name;
+    }
+
     return (
         <div>
-            <Table data={tableData} config={tableConfig} />
+            <SortableTable data={tableData} config={tableConfig} keyFn={keyFn}/>
         </div>
     )
 }

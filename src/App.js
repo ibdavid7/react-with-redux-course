@@ -4,7 +4,8 @@ import { GoBell, GoCloudDownload, GoDatabase } from 'react-icons/go';
 import { Accordion, Route, Link, Sidebar, Button } from './Components';
 import { accordion, dropdownData } from "./Data/dummy";
 import { useState } from 'react';
-import {DropdownPage, ModalPage, TablePage} from './Pages';
+import {DropdownPage, ModalPage, TablePage, CounterPage, CounterPageReducer, CounterPageReducerImmer} from './Pages';
+
 
 function App() {
 
@@ -37,6 +38,18 @@ function App() {
 
                 <Route path={'/table'}>
                     <TablePage />
+                </Route>
+
+                <Route path={'/counter'}>
+                    <CounterPage />
+                </Route>
+
+                <Route path={'/counterreducer'}>
+                    <CounterPageReducer />
+                </Route>
+
+                <Route path={'/counterreducerimmer'}>
+                    <CounterPageReducerImmer/>
                 </Route>
 
                 {/* <DropdownPage /> */}

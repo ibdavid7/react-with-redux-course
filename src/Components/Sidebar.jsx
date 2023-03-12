@@ -9,6 +9,9 @@ const Sidebar = () => {
         { label: 'Buttons', path: '/buttons' },
         { label: 'Modal', path: '/modal' },
         { label: 'Table', path: '/table' },
+        { label: 'Counter', path: '/counter' },
+        { label: 'Counter-Reducer', path: '/counterreducer' },
+        { label: 'Counter-Reducer-Immer', path: '/counterreducerimmer' },
     ];
 
     const renderedItems = links.map((link, index) => {

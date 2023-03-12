@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 
-const Table = ({ data, config, keyFn }) => {
+const Table = ({data, config, keyFn}) => {
 
+    // console.log(data);
 
     const renderedRows = data.map((row, index) => {
+
         return (
-            <tr key={keyFn(row)} className='border-b'>
+            <tr key={keyFn(row) + index} className='border-b'>
 
                 {config.map((col, index) => {
                     return (
@@ -16,20 +18,20 @@ const Table = ({ data, config, keyFn }) => {
         );
     })
 
-    const renderedHeaders = config.map((header, index) => {
-        return <th key={index}>{header.label}</th>
+    const renderedHeaders = config.map((col, index) => {
+        return col.header ? <Fragment key={index}>{col.header(col)}</Fragment> : <th key={index}>{col.label}</th>
     });
 
     return (
         <table className='table-auto border-spacing-2'>
             <thead>
-                <tr className='border-b-2'>
-                    {renderedHeaders}
-                </tr>
+            <tr className='border-b-2'>
+                {renderedHeaders}
+            </tr>
             </thead>
 
             <tbody>
-                {renderedRows}
+            {renderedRows}
             </tbody>
 
         </table>
