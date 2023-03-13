@@ -13,6 +13,7 @@ const Sidebar = () => {
         { label: 'Counter-Reducer', path: '/counterreducer' },
         { label: 'Counter-Reducer-Immer', path: '/counterreducerimmer' },
         { label: 'Playlist', path: '/playlist' },
+        { label: 'Car', path: '/car' },
     ];
 
     const renderedItems = links.map((link, index) => {

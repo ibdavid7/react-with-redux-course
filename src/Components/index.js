@@ -15,4 +15,8 @@ export {default as Table} from './Table';
 export {default as SortableTable} from './SortableTable';
 export {default as MoviePlaylist} from './MoviePlaylist';
 export {default as SongPlaylist} from './SongPlaylist';
+export {default as CarForm} from './CarForm';
+export {default as CarList} from './CarList';
+export {default as CarSearch} from './CarSearch';
+export {default as CarValue} from './CarValue';
 

@@ -5,3 +5,4 @@ export { default as CounterPage } from './CounterPage';
 export { default as CounterPageReducer } from './CounterPageReducer';
 export { default as CounterPageReducerImmer } from './CounterPageReducerImmer';
 export { default as PlaylistPage } from './PlaylistPage';
+export { default as CarWidget } from './CarWidget';

@@ -11,7 +11,8 @@ import {
     CounterPage,
     CounterPageReducer,
     CounterPageReducerImmer,
-    PlaylistPage
+    PlaylistPage,
+    CarWidget
 } from './Pages';
 
 
@@ -62,6 +63,10 @@ function App() {
 
                 <Route path={'/playlist'}>
                     <PlaylistPage/>
+                </Route>
+
+                <Route path={'/car'}>
+                    <CarWidget/>
                 </Route>
 
                 {/* <DropdownPage /> */}
