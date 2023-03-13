@@ -4,3 +4,4 @@ export { default as TablePage } from './TablePage';
 export { default as CounterPage } from './CounterPage';
 export { default as CounterPageReducer } from './CounterPageReducer';
 export { default as CounterPageReducerImmer } from './CounterPageReducerImmer';
+export { default as PlaylistPage } from './PlaylistPage';

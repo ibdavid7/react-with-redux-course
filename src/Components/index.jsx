@@ -13,3 +13,6 @@ export {default as Sidebar} from './Sidebar';
 export {default as Modal} from './Modal';
 export {default as Table} from './Table';
 export {default as SortableTable} from './SortableTable';
+export {default as MoviePlaylist} from './MoviePlaylist';
+export {default as SongPlaylist} from './SongPlaylist';
+

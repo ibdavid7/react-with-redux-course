@@ -4,7 +4,15 @@ import { GoBell, GoCloudDownload, GoDatabase } from 'react-icons/go';
 import { Accordion, Route, Link, Sidebar, Button } from './Components';
 import { accordion, dropdownData } from "./Data/dummy";
 import { useState } from 'react';
-import {DropdownPage, ModalPage, TablePage, CounterPage, CounterPageReducer, CounterPageReducerImmer} from './Pages';
+import {
+    DropdownPage,
+    ModalPage,
+    TablePage,
+    CounterPage,
+    CounterPageReducer,
+    CounterPageReducerImmer,
+    PlaylistPage
+} from './Pages';
 
 
 function App() {
@@ -50,6 +58,10 @@ function App() {
 
                 <Route path={'/counterreducerimmer'}>
                     <CounterPageReducerImmer/>
+                </Route>
+
+                <Route path={'/playlist'}>
+                    <PlaylistPage/>
                 </Route>
 
                 {/* <DropdownPage /> */}
