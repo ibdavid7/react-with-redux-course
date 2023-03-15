@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { addCar } from "../";
 
 const carFormSlice = createSlice({
-    name: 'carform',
+    name: 'carForm',
     initialState: {
         name: null,
         cost: 0,

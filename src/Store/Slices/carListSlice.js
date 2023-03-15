@@ -4,7 +4,7 @@ const carListSlice = createSlice({
     name: 'carList',
     initialState: {
         data: [],
-        searchTerm: ''
+        searchTerm: null,
     },
     reducers: {
         addCar(sliceState, action) {
@@ -32,5 +32,5 @@ const carListSlice = createSlice({
     },
 });
 
-export const {addCar, removeCar} = carListSlice.actions;
+export const {addCar, removeCar, updateSearchTerm} = carListSlice.actions;
 export const carListReducer = carListSlice.reducer;

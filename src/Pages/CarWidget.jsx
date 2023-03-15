@@ -1,13 +1,11 @@
 import React from 'react';
-import {CarForm, CarList, CarSearch, CarValue} from "../Components";
+import {CarForm, CarList} from "../Components";
 
 const CarWidget = () => {
     return (
         <div>
             <CarForm/>
             <CarList/>
-            <CarSearch/>
-            <CarValue/>
         </div>
     );
 };

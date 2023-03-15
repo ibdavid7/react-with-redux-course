@@ -3,7 +3,7 @@ import {reset} from "./actions";
 import {moviesReducer, addMovie, removeMovie} from "./Slices/moviesSlice";
 import {songsReducer, addSong, removeSong} from "./Slices/songsSlice";
 import {carFormReducer, updateName, updateCost, resetCarForm} from "./Slices/carFormSlice";
-import {carListReducer, addCar, removeCar} from "./Slices/carListSlice";
+import {carListReducer, addCar, removeCar, updateSearchTerm} from "./Slices/carListSlice";
 
 const store = configureStore({
     reducer: {
@@ -19,7 +19,7 @@ export {
     addSong, removeSong,
     addMovie, removeMovie,
     updateName, updateCost, resetCarForm,
-    addCar, removeCar,
+    addCar, removeCar, updateSearchTerm,
 };
 
 //
