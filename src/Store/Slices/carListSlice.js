@@ -3,13 +3,13 @@ import {createSlice, nanoid} from "@reduxjs/toolkit";
 const carListSlice = createSlice({
     name: 'carList',
     initialState: {
-        cars: [],
+        data: [],
         searchTerm: ''
     },
     reducers: {
         addCar(sliceState, action) {
             // assume action.payload === {name: 'xx', cost: numb}
-            sliceState.cars.push({
+            sliceState.data.push({
                 ...action.payload,
                 id: nanoid(),
             });
@@ -23,13 +23,13 @@ const carListSlice = createSlice({
             }*/
 
             // can do this with immer because this is reassigning element of obj, not top level object itself
-            const filteredCarList = sliceState.cars.filter((car) => car.id !== action.payload);
-            sliceState.cars = filteredCarList;
+            const filteredCarList = sliceState.data.filter((car) => car.id !== action.payload);
+            sliceState.data = filteredCarList;
         },
         updateSearchTerm(sliceState, action) {
             sliceState.searchTerm = action.payload;
         }
-    }
+    },
 });
 
 export const {addCar, removeCar} = carListSlice.actions;

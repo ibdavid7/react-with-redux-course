@@ -1,4 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
+import { useDispatch } from "react-redux";
+import { addCar } from "../";
 
 const carFormSlice = createSlice({
     name: 'carform',
@@ -19,6 +21,12 @@ const carFormSlice = createSlice({
                 cost: 0,
             }
         }
+    },
+    extraReducers: (builder) => {
+        builder.addCase(addCar, (state, action) => ({
+            name: null,
+            cost: 0,
+        }));
     }
 })
 
