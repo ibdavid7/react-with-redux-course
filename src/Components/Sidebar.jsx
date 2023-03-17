@@ -14,6 +14,7 @@ const Sidebar = () => {
         { label: 'Counter-Reducer-Immer', path: '/counterreducerimmer' },
         { label: 'Playlist', path: '/playlist' },
         { label: 'Car', path: '/car' },
+        { label: 'Photos', path: '/photos' },
     ];
 
     const renderedItems = links.map((link, index) => {

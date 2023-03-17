@@ -37,7 +37,9 @@
       "id": 11
     }
   ],
-  "users" : [],
+  "users" : [
+    {"id": 1, "name" : "Myra"}
+  ],
   "albums" : [],
   "photos" : []
 }
