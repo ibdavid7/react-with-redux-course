@@ -18,4 +18,5 @@ export { default as SongPlaylist } from './SongPlaylist';
 export { default as CarForm } from './CarForm';
 export { default as CarList } from './CarList';
 export { default as UsersList } from './UsersList';
+export { default as UsersListItem } from './UsersListItem';
 

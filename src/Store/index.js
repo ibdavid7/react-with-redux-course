@@ -4,8 +4,7 @@ import {moviesReducer, addMovie, removeMovie} from "./Slices/moviesSlice";
 import {songsReducer, addSong, removeSong} from "./Slices/songsSlice";
 import {carFormReducer, updateName, updateCost, resetCarForm} from "./Slices/carFormSlice";
 import {carListReducer, addCar, removeCar, updateSearchTerm} from "./Slices/carListSlice";
-import { usersReducer } from "./Slices/usersSlice";
-import fetchUsers from './Thunks/fetchUsers';
+import {usersReducer, fetchUsers, addUser, deleteUser} from "./Slices/usersSlice";
 
 const store = configureStore({
     reducer: {
@@ -23,9 +22,8 @@ export {
     addMovie, removeMovie,
     updateName, updateCost, resetCarForm,
     addCar, removeCar, updateSearchTerm,
-    fetchUsers,
+    fetchUsers, addUser, deleteUser,
 };
-
 
 
 //
