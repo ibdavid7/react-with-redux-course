@@ -72,7 +72,7 @@ const UsersList = () => {
         <div className='min-w-full'>
             <Divider orientation="center">List of Users</Divider>
             <List
-                style={{width: '300px'}}
+                style={{width: '500px'}}
                 header={loadingUsersError && <div>{loadingUsersError}</div> ||
                     (
                         < div className='flex flex-row justify-between items-center'>

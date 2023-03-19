@@ -43,20 +43,8 @@
       "name": "Myra"
     },
     {
-      "name": "Jeanette Morissette",
-      "id": 15
-    },
-    {
       "name": "Mrs. Ella Okuneva",
       "id": 16
-    },
-    {
-      "name": "Sadie McCullough",
-      "id": 17
-    },
-    {
-      "name": "Gerard Mann",
-      "id": 19
     },
     {
       "name": "Miss Elbert Hermann",
@@ -79,20 +67,12 @@
       "id": 26
     },
     {
-      "name": "Maureen Quitzon",
-      "id": 27
-    },
-    {
       "name": "Ronnie Bogan",
       "id": 28
     },
     {
       "name": "Randolph Moore",
       "id": 29
-    },
-    {
-      "name": "Cynthia Upton",
-      "id": 30
     },
     {
       "name": "Valerie VonRueden",
@@ -143,6 +123,188 @@
       "id": 45
     }
   ],
-  "albums": [],
-  "photos": []
+  "albums": [
+    {
+      "id": 2,
+      "title": "Running trip",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "title": "Cycling trip",
+      "userId": 1
+    },
+    {
+      "id": 5,
+      "title": "Sailing trip",
+      "userId": 1
+    },
+    {
+      "userId": 16,
+      "title": "Recycled Wooden Towels",
+      "id": 6
+    },
+    {
+      "userId": 16,
+      "title": "Bespoke Rubber Car",
+      "id": 7
+    },
+    {
+      "userId": 16,
+      "title": "Ergonomic Soft Bacon",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "title": "Sleek Fresh Mouse",
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "title": "Fantastic Bronze Soap",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "title": "Intelligent Metal Table",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "title": "Tasty Metal Chips",
+      "id": 14
+    },
+    {
+      "userId": 22,
+      "title": "Ergonomic Steel Sausages",
+      "id": 15
+    },
+    {
+      "userId": 23,
+      "title": "Refined Rubber Salad",
+      "id": 16
+    },
+    {
+      "userId": 23,
+      "title": "Unbranded Steel Tuna",
+      "id": 17
+    },
+    {
+      "userId": 23,
+      "title": "Elegant Concrete Chicken",
+      "id": 18
+    },
+    {
+      "userId": 36,
+      "title": "Ergonomic Soft Bacon",
+      "id": 19
+    },
+    {
+      "userId": 36,
+      "title": "Unbranded Granite Soap",
+      "id": 20
+    },
+    {
+      "userId": 36,
+      "title": "Sleek Wooden Fish",
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "title": "Practical Fresh Shoes",
+      "id": 22
+    },
+    {
+      "userId": 1,
+      "title": "Bespoke Bronze Salad",
+      "id": 23
+    },
+    {
+      "userId": 1,
+      "title": "Luxurious Rubber Bacon",
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "title": "Handcrafted Soft Towels",
+      "id": 25
+    },
+    {
+      "userId": 1,
+      "title": "Handmade Frozen Car",
+      "id": 26
+    },
+    {
+      "userId": 24,
+      "title": "Bespoke Fresh Shirt",
+      "id": 27
+    }
+  ],
+  "photos": [
+    {
+      "id": "txLT9TC386LjkrtIr6xtK",
+      "albumId": 2,
+      "url": "https://loremflickr.com/200/200/business?lock=20668"
+    },
+    {
+      "id": "VOcuwMNx1BXZ0jknVrQ3L",
+      "albumId": 2,
+      "url": "https://loremflickr.com/200/200/business?lock=22958"
+    },
+    {
+      "id": "TEKWvpPTmZfblvUq5S4c5",
+      "albumId": 2,
+      "url": "https://loremflickr.com/200/200/business?lock=18960"
+    },
+    {
+      "id": "RVJ0931LPQTqbUJQyx5NT",
+      "albumId": 14,
+      "url": "https://loremflickr.com/200/200/business?lock=21678"
+    },
+    {
+      "id": "KEQz3zCHZjdekT8kzBJFc",
+      "albumId": 3,
+      "url": "https://loremflickr.com/200/200/business?lock=75936"
+    },
+    {
+      "id": "WL9rePvcVk5hxpbizw9WC",
+      "albumId": 3,
+      "url": "https://loremflickr.com/200/200/business?lock=98215"
+    },
+    {
+      "id": "hz_h2Z-705ypEZm-ma3i8",
+      "albumId": 3,
+      "url": "https://loremflickr.com/200/200/business?lock=78705"
+    },
+    {
+      "id": "jud8adHp2vqJYzN8DwFXA",
+      "albumId": 3,
+      "url": "https://loremflickr.com/200/200/business?lock=19268"
+    },
+    {
+      "id": "ds7GX7360xyyY6tW3kqzh",
+      "albumId": 5,
+      "url": "https://loremflickr.com/200/200/business?lock=17631"
+    },
+    {
+      "id": "euXTrd0R4ur07QgapqRRS",
+      "albumId": 5,
+      "url": "https://loremflickr.com/200/200/business?lock=79605"
+    },
+    {
+      "id": "RcoPSfQJzz8wFBHhTuEt9",
+      "albumId": 3,
+      "url": "https://loremflickr.com/200/200/business?lock=92407"
+    },
+    {
+      "id": "BcuhWrqtiLlM4CDugslCm",
+      "albumId": 2,
+      "url": "https://loremflickr.com/200/200/business?lock=58462"
+    },
+    {
+      "id": "K7i-pjZIqzAXuCrH_L1iA",
+      "albumId": 2,
+      "url": "https://loremflickr.com/200/200/business?lock=25918"
+    }
+  ]
 }

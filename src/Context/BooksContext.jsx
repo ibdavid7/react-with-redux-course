@@ -8,7 +8,7 @@ const Provider = ({children}) => {
     const [books, setBooks] = useState([]);
 
     const fetchBooks = useCallback(async () => {
-            const response = axios.get(process.env.REACT_APP_API_URL);
+            const response = axios.get(process.env.REACT_APP_API_URL_BOOKS);
             setBooks((await response).data)
         },
         []);
@@ -17,8 +17,8 @@ const Provider = ({children}) => {
 
         // API code
         try {
-            console.log(process.env.REACT_APP_API_URL);
-            const response = await axios.post(process.env.REACT_APP_API_URL, {title: title});
+            // console.log(process.env.REACT_APP_API_URL);
+            const response = await axios.post(process.env.REACT_APP_API_URL_BOOKS, {title: title});
             // console.log(response.data);
             setBooks([
                 ...books,
@@ -33,7 +33,7 @@ const Provider = ({children}) => {
     const deleteBookById = async (id) => {
 
         try {
-            await axios.delete(`${process.env.REACT_APP_API_URL}/${id}`);
+            await axios.delete(`${process.env.REACT_APP_API_URL_BOOKS}/${id}`);
 
             const updatedBooks = books.filter((book) => book.id !== id);
             setBooks(updatedBooks);
@@ -46,7 +46,7 @@ const Provider = ({children}) => {
     const editBookTitleById = async (id, newTitle) => {
 
         try {
-            const response = await axios.put(`${process.env.REACT_APP_API_URL}/${id}`, {
+            const response = await axios.put(`${process.env.REACT_APP_API_URL_BOOKS}/${id}`, {
                 id: id, title: newTitle,
             })
             // console.log(response);
