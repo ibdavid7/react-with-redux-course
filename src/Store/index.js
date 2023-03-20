@@ -16,6 +16,8 @@ const store = configureStore({
         carForm: carFormReducer,
         carList: carListReducer,
         users: usersReducer,
+        posts: //TODO,
+        authors: //TODO,
         //albums: AlbumsApi.reducer,  - dont write out as hardcoded value
         [AlbumsApi.reducerPath]: AlbumsApi.reducer,
         [PhotosApi.reducerPath]: PhotosApi.reducer,

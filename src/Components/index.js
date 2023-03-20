@@ -24,4 +24,6 @@ export { default as AlbumsList } from './AlbumsList';
 export { default as AlbumsListItem } from './AlbumsListItem';
 export { default as PhotosList } from './PhotosList';
 export { default as PhotoListItem } from './PhotoListItem';
+export { default as AddPostForm } from './AddPostForm';
+export { default as PostList } from './PostList';
 

@@ -7,3 +7,4 @@ export { default as CounterPageReducerImmer } from './CounterPageReducerImmer';
 export { default as PlaylistPage } from './PlaylistPage';
 export { default as CarWidget } from './CarWidget';
 export { default as PhotoWidget } from './PhotoWidget';
+export { default as PostWidget } from './PostWidget';

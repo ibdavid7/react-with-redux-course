@@ -74,6 +74,10 @@ function App() {
                     <PhotoWidget/>
                 </Route>
 
+                <Route path={'/posts'}>
+                    <PostWidget/>
+                </Route>
+
                 {/* <DropdownPage /> */}
                 {/* <Accordion items={accordion}/> */}
                 {/*<SideBar/>*/}

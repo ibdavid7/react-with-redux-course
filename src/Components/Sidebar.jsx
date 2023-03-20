@@ -15,6 +15,7 @@ const Sidebar = () => {
         { label: 'Playlist', path: '/playlist' },
         { label: 'Car', path: '/car' },
         { label: 'Photos', path: '/photos' },
+        { label: 'Posts', path: '/posts' },
     ];
 
     const renderedItems = links.map((link, index) => {
