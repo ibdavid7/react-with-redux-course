@@ -25,3 +25,6 @@ const moviesSlice = createSlice({
 
 export const {addMovie, removeMovie} = moviesSlice.actions;
 export const moviesReducer = moviesSlice.reducer;
+
+// maintain and export one central selector in case the shape of stateSlice changes, only one place to change it
+export const movieSelector = (state) => state.movies;

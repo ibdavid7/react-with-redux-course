@@ -1,6 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {reset} from "./actions";
-import {moviesReducer, addMovie, removeMovie} from "./Slices/moviesSlice";
+import {moviesReducer, addMovie, removeMovie, movieSelector} from "./Slices/moviesSlice";
 import {songsReducer, addSong, removeSong} from "./Slices/songsSlice";
 import {carFormReducer, updateName, updateCost, resetCarForm} from "./Slices/carFormSlice";
 import {carListReducer, addCar, removeCar, updateSearchTerm} from "./Slices/carListSlice";
@@ -8,7 +8,6 @@ import {usersReducer, fetchUsers, addUser, deleteUser} from "./Slices/usersSlice
 import {AlbumsApi, useFetchAlbumsQuery, useAddAlbumMutation, useDeleteAlbumMutation} from "./ApiRTKQ/AlbumsApi";
 import {PhotosApi, useFetchPhotosQuery, useAddPhotoMutation, useDeletePhotoMutation} from './ApiRTKQ/PhotosApi';
 import {setupListeners} from "@reduxjs/toolkit/query";
-
 
 const store = configureStore({
     reducer: {
@@ -33,7 +32,7 @@ setupListeners(store.dispatch);
 export {
     store, reset,
     addSong, removeSong,
-    addMovie, removeMovie,
+    addMovie, removeMovie, movieSelector,
     updateName, updateCost, resetCarForm,
     addCar, removeCar, updateSearchTerm,
     fetchUsers, addUser, deleteUser,
