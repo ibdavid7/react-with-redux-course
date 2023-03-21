@@ -9,7 +9,7 @@ import { AlbumsApi, useFetchAlbumsQuery, useAddAlbumMutation, useDeleteAlbumMuta
 import { PhotosApi, useFetchPhotosQuery, useAddPhotoMutation, useDeletePhotoMutation } from './ApiRTKQ/PhotosApi';
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { authorsReducer, selectAllAuthors, fetchAuthors } from "./Slices/authorsSlice";
-import { fetchPosts, addNewPost, postsReducer, postAdded, reactionAdded, selectAllPosts, getPostsStatus, getPostsError } from "./Slices/postsSlice";
+import { fetchPosts, addNewPost, postsReducer, postAdded, reactionAdded, selectAllPosts, getPostsStatus, getPostsError, selectPostById } from "./Slices/postsSlice";
 
 
 const store = configureStore({
@@ -45,7 +45,7 @@ export {
     useFetchAlbumsQuery, useAddAlbumMutation, useDeleteAlbumMutation,
     useFetchPhotosQuery, useAddPhotoMutation, useDeletePhotoMutation,
     fetchAuthors, selectAllAuthors,
-    fetchPosts, addNewPost, postAdded, reactionAdded, selectAllPosts, getPostsStatus, getPostsError,
+    fetchPosts, addNewPost, postAdded, reactionAdded, selectAllPosts, getPostsStatus, getPostsError, selectPostById
 };
 
 
