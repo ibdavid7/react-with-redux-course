@@ -1,13 +1,16 @@
-import {configureStore} from "@reduxjs/toolkit";
-import {reset} from "./actions";
-import {moviesReducer, addMovie, removeMovie, movieSelector} from "./Slices/moviesSlice";
-import {songsReducer, addSong, removeSong} from "./Slices/songsSlice";
-import {carFormReducer, updateName, updateCost, resetCarForm} from "./Slices/carFormSlice";
-import {carListReducer, addCar, removeCar, updateSearchTerm} from "./Slices/carListSlice";
-import {usersReducer, fetchUsers, addUser, deleteUser} from "./Slices/usersSlice";
-import {AlbumsApi, useFetchAlbumsQuery, useAddAlbumMutation, useDeleteAlbumMutation} from "./ApiRTKQ/AlbumsApi";
-import {PhotosApi, useFetchPhotosQuery, useAddPhotoMutation, useDeletePhotoMutation} from './ApiRTKQ/PhotosApi';
-import {setupListeners} from "@reduxjs/toolkit/query";
+import { configureStore } from "@reduxjs/toolkit";
+import { reset } from "./actions";
+import { moviesReducer, addMovie, removeMovie, movieSelector } from "./Slices/moviesSlice";
+import { songsReducer, addSong, removeSong } from "./Slices/songsSlice";
+import { carFormReducer, updateName, updateCost, resetCarForm } from "./Slices/carFormSlice";
+import { carListReducer, addCar, removeCar, updateSearchTerm } from "./Slices/carListSlice";
+import { usersReducer, fetchUsers, addUser, deleteUser } from "./Slices/usersSlice";
+import { AlbumsApi, useFetchAlbumsQuery, useAddAlbumMutation, useDeleteAlbumMutation } from "./ApiRTKQ/AlbumsApi";
+import { PhotosApi, useFetchPhotosQuery, useAddPhotoMutation, useDeletePhotoMutation } from './ApiRTKQ/PhotosApi';
+import { setupListeners } from "@reduxjs/toolkit/query";
+import { authorsReducer, selectAllAuthors, fetchAuthors } from "./Slices/authorsSlice";
+import { fetchPosts, addNewPost, postsReducer, postAdded, reactionAdded, selectAllPosts, getPostsStatus, getPostsError } from "./Slices/postsSlice";
+
 
 const store = configureStore({
     reducer: {
@@ -16,8 +19,8 @@ const store = configureStore({
         carForm: carFormReducer,
         carList: carListReducer,
         users: usersReducer,
-        posts: //TODO,
-        authors: //TODO,
+        posts: postsReducer,
+        authors: authorsReducer,
         //albums: AlbumsApi.reducer,  - dont write out as hardcoded value
         [AlbumsApi.reducerPath]: AlbumsApi.reducer,
         [PhotosApi.reducerPath]: PhotosApi.reducer,
@@ -31,6 +34,7 @@ const store = configureStore({
 // window.store = store
 setupListeners(store.dispatch);
 
+
 export {
     store, reset,
     addSong, removeSong,
@@ -40,6 +44,8 @@ export {
     fetchUsers, addUser, deleteUser,
     useFetchAlbumsQuery, useAddAlbumMutation, useDeleteAlbumMutation,
     useFetchPhotosQuery, useAddPhotoMutation, useDeletePhotoMutation,
+    fetchAuthors, selectAllAuthors,
+    fetchPosts, addNewPost, postAdded, reactionAdded, selectAllPosts, getPostsStatus, getPostsError,
 };
 
 

@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { AddPostForm, PostList } from '../Components';
 
 const PostWidget = () => {
     return (
         <div>
             <AddPostForm />
-            <PostsList />
+            <PostList />
         </div>
     )
 }

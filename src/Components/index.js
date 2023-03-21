@@ -26,4 +26,7 @@ export { default as PhotosList } from './PhotosList';
 export { default as PhotoListItem } from './PhotoListItem';
 export { default as AddPostForm } from './AddPostForm';
 export { default as PostList } from './PostList';
+export { default as PostAuthor } from './PostAuthor';
+export { default as PostsExcerpt } from './PostsExcerpt';
+export { default as ReactionButtons } from './ReactionButtons';
 

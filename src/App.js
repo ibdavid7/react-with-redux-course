@@ -13,9 +13,12 @@ import {
     CounterPageReducerImmer,
     PlaylistPage,
     CarWidget,
-    PhotoWidget
+    PhotoWidget,
+    PostWidget
 } from './Pages';
+import { fetchAuthors, store } from './Store';
 
+store.dispatch(fetchAuthors());
 
 function App() {
 
@@ -59,23 +62,23 @@ function App() {
                 </Route>
 
                 <Route path={'/counterreducerimmer'}>
-                    <CounterPageReducerImmer/>
+                    <CounterPageReducerImmer />
                 </Route>
 
                 <Route path={'/playlist'}>
-                    <PlaylistPage/>
+                    <PlaylistPage />
                 </Route>
 
                 <Route path={'/car'}>
-                    <CarWidget/>
+                    <CarWidget />
                 </Route>
 
                 <Route path={'/photos'}>
-                    <PhotoWidget/>
+                    <PhotoWidget />
                 </Route>
 
                 <Route path={'/posts'}>
-                    <PostWidget/>
+                    <PostWidget />
                 </Route>
 
                 {/* <DropdownPage /> */}
