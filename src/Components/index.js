@@ -30,4 +30,6 @@ export { default as PostAuthor } from './PostAuthor';
 export { default as PostsExcerpt } from './PostsExcerpt';
 export { default as ReactionButtons } from './ReactionButtons';
 export { default as SinglePostPage } from './SinglePostPage';
+export { default as Header } from './Header';
+export { default as EditPostPage } from './EditPostPage';
 

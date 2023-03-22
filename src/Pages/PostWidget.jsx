@@ -4,7 +4,7 @@ import { AddPostForm, PostList } from '../Components';
 const PostWidget = () => {
     return (
         <div>
-            <AddPostForm />
+            {/* <AddPostForm /> */}
             <PostList />
         </div>
     )
