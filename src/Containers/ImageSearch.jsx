@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SearchBar } from '../Components';
 import { Api } from '../Data';
-import { Space, Divider, Card } from 'antd';
+import { Button, Space, Divider, Card } from 'antd';
 const { Meta } = Card;
 
 
@@ -74,8 +74,7 @@ const ImageSearch = () => {
                 {response.map((image, index) => {
 
                     return (
-                        <div style={{ padding: '10px' }} key={index} id={image.id}>
-                            {/*{console.log(image.id)}*/}
+                        <div style={{ padding: '10px' }} key={image.id}>
                             <Card
                                 hoverable
                                 style={{ width: 240 }}
